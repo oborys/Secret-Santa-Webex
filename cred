@@ -1,0 +1,14 @@
+
+[Webex]
+
+# PASTE_BOT'S_ACCESS_TOKEN
+WEBEX_TEAMS_TOKEN = 
+WEBEX_BOT_EMAIL = 
+# Paste webhookUrl (port 56733)
+WEBEX_WEBHOOK_URL =  
+
+[Text]
+CHECK_ANSWER = Your answer has been written before
+ANSWER_IS_WRITTEN = Thank you, your answer is written \n Wait for December 28th! \n At 10:00 you will know to whom you will give a gift
+
+

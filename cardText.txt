@@ -1,0 +1,37 @@
+{
+    "toPersonEmail": "USER_EMAIL",
+    "markdown": "Santa",
+    "attachments": [
+        {
+            "contentType": "application/vnd.microsoft.card.adaptive",
+            "content": {
+                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                "type": "AdaptiveCard",
+                "version": "1.0",
+                "body": [
+                    {
+                        "type": "Image",
+                        "altText": "",
+                        "url": "https://i.ibb.co/dmD0xNF/santa-ua.png"
+                    },
+                    {
+                        "type": "TextBlock",
+                        "text": "Hi! \n Secret Santa is a Christmas tradition of anonymously exchanging gifts with a group of people. And to make everything easy and convenient this year, I, the Secret Santa bot, will help make it happen! If you want to take part, please write to me how you will receive the gift: \n -  Through the post office (then specify the branch number, recipient's name, and phone number, e.t.c.) \n - or just write in the 'office' (then your gift will be waiting at the reception) \n \n And some more rules: \n 1) By 12.12 (10:00) all participants will receive an address to send a gift. \n 2) It is desirable to choose something in the budget up to $10. \n 3) Sending gifts must be done by 16-20.12. \n \n Happy New Year everyone!",
+                        "wrap": true
+                    },
+                    {
+                        "type": "Input.Text",
+                        "id": "address",
+                        "placeholder": "through the office reception, or postal address"
+                    }
+                ],
+                "actions": [
+                    {
+                        "type": "Action.Submit",
+                        "title": "Send the address and take part"
+                    }
+                ]
+            }
+        }
+    ]
+}
