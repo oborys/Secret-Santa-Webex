@@ -241,5 +241,5 @@ def webex_webhook():
 
 
 print("Start the Santa")
-#deleteWebHooks(bearer_bot, webhookUrl)
+deleteWebHooks(bearer_bot, webhookUrl)
 createWebhook(bearer_bot, webhookUrl)

@@ -3,9 +3,8 @@ Webex bot for Secret Santa
 
 Secret Santa is a Christmas tradition of anonymously exchanging gifts with a group of people. The Secret Santa Webex bot can help to make everything easy and convenient.
 
-- [x] collect/count the user's that want to partisipate in Secret Santa
-- [x] Randomly mixes all participants, and
-- [x] aggregate and submit daily reports with information about bookings and available (empty) seats to Space(Room) (or user list)
+- [x] collect/count the user's that want to participate in Secret Santa
+- [x] Randomly mixes all participants and identifies and notifies who gives gifts to whom 
 
 ### Requirements
 - [Python](https://www.python.org/downloads/)
@@ -37,7 +36,7 @@ def createWebhook(bearer, webhookUrl):
             "resource": "attachmentActions",
             "event": "created"
         }
-        send_webex_post("https://api.ciscospark.com/v1/webhooks/", dataWebhook)
+        send_webex_post("https://webexapis.com/v1/webhooks/", dataWebhook)
         send_webex_post("https://webexapis.com/v1/webhooks/", dataWebhookCard)
     print("Webhook status: done")
 ```
@@ -189,8 +188,8 @@ And parse date from user
 **1. Clone and open project**
 
 ```
-git clone https://github.com/oborys/booking_workplace_webex_bot
-cd booking_workplace_webex_bot
+git clone https://github.com/oborys/Secret-Santa-Webex
+cd Secret-Santa-Webex
 ```
 **2. Open files [cred](cred), [app/views.py](app/views.py) and [Dockerfile](Dockerfile)**
 
@@ -206,6 +205,8 @@ Copy Bot's Access Token
 **Paste it into the file [cred](cred) variable `WEBEX_TEAMS_TOKEN` and past bot email in `WEBEX_BOT_EMAIL` variable**
 
 For sent information to your server/localhost, create [Webhook](https://developer.cisco.com/learning/tracks/devnet-express-cloud-collab-it-pro/creating-spark-bots-itp/collab-spark-botl-itp/step/4)
+
+Paste `WEBEX_WEBHOOK_URL` in the file [cred](cred) it can look like http://ip-address:56733 or http://localhost:56733
 
 For testing on localhost, you can use [ngrok](https://ngrok.com/download)
 After installing ngrok open **new terminal window** and run the command
